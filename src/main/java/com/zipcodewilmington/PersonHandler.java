@@ -14,16 +14,26 @@ public class PersonHandler {
     // simple lines of code...
     
     public String whileLoop() {
+
         String result = "";
         // create a `counter`
+        int counter = 0;
+        int arrayLength = personArray.length;
+        String stringPerson = "";
+        StringBuilder currentPerson = new StringBuilder();
         // while `counter` is less than length of array
             // begin loop
+        while (counter < arrayLength) {
+            stringPerson = (personArray[counter]).toString();
+            currentPerson.append(stringPerson);
+            counter += 1;
+            // use `counter` to identify the `current Person` in the array
+            // get `string Representation` of `currentPerson`
+            // append `stringRepresentation` to `result` variable
 
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-
-            // end loop
+        }
+        // end loop
+        result = currentPerson.toString();
         return result;
     }
 
@@ -34,6 +44,14 @@ public class PersonHandler {
         // identify initial value
         // identify terminal condition
         // identify increment
+        StringBuilder currentPerson = new StringBuilder();
+        String stringPerson;
+
+        for (int i = 0; i < personArray.length ; i++) {
+            stringPerson = personArray[i].toString();
+            currentPerson.append(stringPerson);
+        }
+        result = currentPerson.toString();
 
         // use the above clauses to declare for-loop signature
             // begin loop
@@ -49,8 +67,15 @@ public class PersonHandler {
 
     public String forEachLoop() {
         String result = "";
+        StringBuilder currentPerson = new StringBuilder();
+        String stringPerson;
         // identify array's type
         // identify array's variable-name
+        for (Person i : personArray ) {
+            stringPerson = i.toString();
+            currentPerson.append(stringPerson);
+        }
+        result = currentPerson.toString();
 
         // use the above discoveries to declare for-each-loop signature
             // begin loop
